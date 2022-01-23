@@ -64,14 +64,14 @@
       <div class="box"><p>Caja con medidas en pixeles</p></div>
       <div class="box-flexible"><p>Caja flexible con unidades de medidas relativas</p></div>
       <div class="box-flexible-2"><p>Caja flexible con pixeles, pero utilizando max/min-width y max/min-heigth.</p></div>
+      <div class="box-flexible-3"></div>
+      <div class="box-flexible-4"></div>
     </article>
     <hr>
+    <!----MULTIMEDIA FLEXIBLE---->
     <article id="multimedia-flexible" class="full-screen">
       <h2>Multimedia Flexible</h2>
-      <p>
-        Un elemento <b>multimedia</b> es todo aquello que no es texto, las siguientes etiquetas son ejemplos de
-        multimedia:
-      </p>
+      <p> Un elemento <b>multimedia</b> es todo aquello que no es texto, las siguientes etiquetas son ejemplos de multimedia:</p>
       <ul>
         <li><b><i>img</i></b></li>
         <li><b><i>audio</i></b></li>
@@ -95,10 +95,26 @@
       </code></pre>
       <h3>Imágenes Responsivas</h3>
       <p>Simplemente adaptamos la imagen al tamaño de su contenedor.</p>
+      <img src="img/puesta-sol.jpg" alt="puesta del sol">
       <h4>Atributo <i>srcset</i> y <i>sizes</i></h4>
-      <p> El propósito de estos atributos, es mejorar el rendimiento de carga, al colocar la misma imagen pero en diferentes tamaños y pesos, dependiendo del tamaño o la resolución de la pantalla. </p>
+      <p>El propósito de estos atributos, es mejorar el rendimiento de carga, al colocar la misma imagen pero en diferentes tamaños y pesos, dependiendo del tamaño o la resolución de la pantalla.</p>
+      <img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 600w, img/html5-3d-900.png 900w img/html5-3d-1200.png 1200w" alt="icono de HTML5">
+      <h5>Utilizando el atributo srcset </h5>
+      <img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 1x, img/html5-3d-900.png 1.5x img/html5-3d-1200.png 2x" alt="icono de HTML5">
+      <h5>Utilizando el atributo srcset y sizes</h5>
+      <img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 1x, img/html5-3d-900.png 1.5x img/html5-3d-1200.png 2x" sizes="(max-width:480px) 300px, (max-width:600px) 480px, (max-width:768px) 600px, (max-width: 1024px) 900px, (min-width: 1200px) 1200px"  alt="icono de HTML5">
       <h4>Etiqueta <i>picture</i></h4>
       <p> El objetivo de esta etiqueta, no es sólo mostrar diferentes tamaños de la misma imagen, sino también mostrar imágenes diferentes. Por ejemplo, recortar una Imagen de forma diferente según el tamaño de la pantalla y las diferencias en el diseño. Esto se conoce como "dirección de arte".</p>
+      <picture>
+        <source srcset="img/kitten-large.png" media="(min-width: 1024px)">
+        <source srcset="img/kitten-medium.png" media="(min-width: 600px)">
+        <img src="img/kitten-small.png" alt="kitten">
+      </picture>
+      <h5>Imagen .webp:</h5>
+      <picture>
+        <source srcset="img/butterfly.webp" type="image/webp"> 
+        <img src="img/butterfly.jpg" alt="butterfly">
+      </picture>
       <h3>Videos Responsivos</h3>
       <h3>Iframes Responsivos </h3>
     </article>

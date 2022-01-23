@@ -1,10 +1,17 @@
 :root {
-  --orangered: rgb(199, 57, 25);
+  --yellow: #feee10;
+  --yello2: #ffab00;
+  --yellow3: #ff8700;
+  --orange: #fd6100;
+  --orange2: #fd6100;
+  --red: #f10c0c;
+  --red2: #8d0403;
+  --red-dark: #77030b;
   --white: #fff;
 }
 
 [class^="box"] {
-  background-color: var(--orangered);
+  background-image: linear-gradient(to top, var(--yellow), var(--yello2), var(--yellow3), var(--orange), var(--orange2), var(--red), var(--red2), var(--red-dark));
   margin: 3rem auto;
 }
 
@@ -18,12 +25,31 @@
   height: 20vh;
 }
 
-/*hay que tener cuidado al utilizar maximo y minimos y una altura base*/
 .box-flexible-2 {
   max-width: 960px;
   min-width: 120px;
   max-height: 480px;
   min-height: 120px;
+}
+
+/*hay que tener cuidado al utilizar maximo y minimos y una altura  o anchura base en pixeles, aca tengo el ejemplo que al expresar en pixeles el width y el height, entonces se anulan las propiedades que antes defini con max/min-width/height*/
+.box-flexible-3 {
+  max-width: 960px;
+  min-width: 280px;
+  max-height: 480px;
+  min-height: 280px;
+  width: 300px;
+  height: 300px;
+}
+
+/*En este caso al establecer width y height base, pero en medidas relativas si es responsiva, por el width del 50%, pero al llegar a un minimo o a un máximo si se v aa comportar como se establecio con los prefijos max y min*/
+.box-flexible-4 {
+  max-width: 960px;
+  min-width: 280px;
+  max-height: 480px;
+  min-height: 280px;
+  width: 50%;
+  height: 20vh;
 }
 
 .box p,
@@ -34,4 +60,9 @@
   line-height: 1.5;
   padding: 0.25rem;
   text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

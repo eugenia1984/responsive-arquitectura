@@ -112,3 +112,67 @@ Más información [Diseño Web en la Era Móvil](https://www.iconos.edu.mx/qrtes
 antes se trabajaba con medida fijas (px), pero luego al tener más tamaños de pantalla se comenzó a trabajar con medidas responsivas, como **em** o **rem**.
 
 ---
+
+## Multimedia flexible
+
+img, audio, video, iframe, canvas, svg, picture, object, embed, map, area.
+
+En el Responsive Design la multimedia debe ser flexible y adaptarse al tamaño de su contenedor, lo podemos lograr con las siguiente regla CSS:
+
+```CSS
+img, audio, video, iframe, canvas, svg, picture {
+          max-width:100%;
+          height: auto;
+        }
+```
+**Atributo srcset y sizes**: para mejorar el rendimiento de carga, al colocar la misma imagen pero en diferentes tamaños y pesos, dependiendo del tamaño o la resolución de la pantalla.
+
+Ejemplo en código:
+
+```html
+<img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 1x, img/html5-3d-900.png 1.5x img/html5-3d-1200.png 2x" alt="icono de HTML5">
+```
+
+Para este segundo caso, si se carga la imagen del tamaño más grande no se va a ver la responsividad, pero si se carga del tamaño más pequeño si se nota.
+
+Utilizando el atributo **srcset**. Ejemplo en código:
+
+```html
+ <img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 600w, img/html5-3d-900.png 900w img/html5-3d-1200.png 1200w" alt="icono de HTML5">
+```
+
+Utilizando el atributo **srcset** y **sizes**. Ejemplo en código:
+
+```html
+  <img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 1x, img/html5-3d-900.png 1.5x img/html5-3d-1200.png 2x" sizes="(max-width:480px) 300px, (max-width:600px) 480px, (max-width:768px) 600px, (max-width: 1024px) 900px, (min-width: 1200px) 1200px"  alt="icono de HTML5">
+```
+
+Muchas plantillas de WordPress lo utilizan, internamente genera varios tamaños de la imagen que subo, genera entre 3 a 5 tamaños, para dependiendo de la resolucion del Theme se utilizan los atributos srcset y sizes.
+
+
+**Etiqueta picture**: para mostrar diferentes tamaños de la misma imagen, y también mostrar imágenes diferentes. Por ejemplo, recortar una Imagen de forma diferente según el tamaño de la pantalla y las diferencias en el diseño. Esto se conoce como "dirección de arte".
+
+Esto se ve en los sitios que tiene una version minificada de su logo, entoences acorde al tamaño se ve un logo u otro.
+
+Para los navegadores que no soportan la etiqueta **picture** utilizamos al etiqueta **img** con la imagen más pequeña.
+
+Ejemplo en código:
+
+```html
+<picture>
+  <source srcset="img/kitten-large.png" media="(min-width: 1024px)">
+  <source srcset="img/kitten-medium.png" media="(min-width: 600px)">
+  <img src="img/kitten-small.png" alt="kitten">
+</picture>
+```
+
+Pero también tenemos un nuevo tipo de formato **webp**, propuesto por Google, es una mejor solución de imagen para los jpg y gif animados.
+
+```htlm
+<picture>
+  <source srcset="img/butterfly.webp" type="image/webp"> 
+  <img src="img/butterfly.jpg" alt="butterfly">
+</picture>
+```
+
+---
