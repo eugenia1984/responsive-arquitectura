@@ -125,6 +125,9 @@ img, audio, video, iframe, canvas, svg, picture {
           height: auto;
         }
 ```
+
+### Imagenes
+
 **Atributo srcset y sizes**: para mejorar el rendimiento de carga, al colocar la misma imagen pero en diferentes tamaños y pesos, dependiendo del tamaño o la resolución de la pantalla.
 
 Ejemplo en código:
@@ -174,5 +177,7 @@ Pero también tenemos un nuevo tipo de formato **webp**, propuesto por Google, e
   <img src="img/butterfly.jpg" alt="butterfly">
 </picture>
 ```
+
+### Videos
 
 ---
