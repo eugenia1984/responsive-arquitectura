@@ -7,6 +7,8 @@
   <title>Curso Responsive Design y Arquitectura CSS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
   <link rel="stylesheet" href="css/init.css">
+  <!--CSS to print-->
+  <link rel="stylesheet" media="print" href="css/print.css">
   <!--My CSS-->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -128,13 +130,23 @@
       <div class="aspect-ratio-16-9"></div>
       <!---I FRAMES RESPONSIVOS---->
       <h3>Iframes Responsivos </h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/F55LNTW3GE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h4>Con la propiedad <strong>aspect-ratio</strong> </h4>
+      <div class="iframe-video-16-9">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/F55LNTW3GE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <h4>Iframe de Google maps con aspect-ratio</h4>
+      <iframe class="aspect-ratio-1-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15057.432841496568!2d-99.1802766874317!3d19.35363628612117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fe5f68bfc051%3A0xbc7ce0154d2a8642!2sViveros%20de%20Coyoac%C3%A1n%2C%20Del%20Carmen%2C%2004100%20Mexico%20City%2C%20CDMX%2C%20Mexico!5e0!3m2!1sen!2sar!4v1642979586081!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </article>
     <hr>
+    <!----MEDIA QUERIES----->
     <article id="media-queries" class="full-screen">
       <h2><i>Media Queries</i></h2>
       <p> Desde la especificación de <a href="http://www.w3.org/TR/CSS2/" target="_blank"><i>CSS 2.1</i></a>, las hojas de estilo han tenido cierto grado de capacidad para el reconocimiento de dispositivos mediante el uso de tipos de medios. Por ejemplo:</p>
-      <pre><code class="language-html">&lt;link rel="stylesheet" href="print.css" media="print"&gt;</code></pre>
-      <p> Con <i>CSS3</i>, la <i>W3C</i> perfeccionó y mejoró los tipos de medios con características multimedia y con la capacidad de preguntar dichas aracterísticas a los medios. </p>
+      <pre>
+        <code class="language-html">&lt;link rel="stylesheet" media="print" href="print.css" &gt;</code>
+      </pre>
+      <p>Con <i>CSS3</i>, la <i>W3C</i> perfeccionó y mejoró los tipos de medios con características multimedia y con la capacidad de preguntar dichas aracterísticas a los medios. </p>
       <p> Esto no sólo hace posible inspeccionar el contenido que se entrega al dispositivo, sino también las características físicas reales del dispositivo. </p>
       <p> El uso de <i>media queries</i> permite pedir fácilmente al navegador sus características, tales como anchura, altura, relación de aspecto, orientación, ntre otras. </p>
       <p>  La sintaxis es la siguiente:</p>
@@ -262,6 +274,7 @@
       </ul>
     </article>
     <hr>
+    <!----BREAKPOINTS---->
     <article id="breakpoints" class="full-screen">
       <h2><i>Breakpoints</i></h2>
       <p> <i>Ethan Marcotte</i> en su libro <i>Responsive Design</i> páginas 113-114 nos propone la siguiente lista de puntos de interrupción según la resolución del dispositivo: </p>

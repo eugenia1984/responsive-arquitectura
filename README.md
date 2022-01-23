@@ -180,4 +180,38 @@ Pero también tenemos un nuevo tipo de formato **webp**, propuesto por Google, e
 
 ### Videos
 
+La forma más clásica de hacerlo responsivo, es con las propiedades:
+
+```CSS
+max-width: 100%;
+height: auto;
+````
+
+Otro modo es utilizando la propiedad **aspect-ratio**.
+
+## Media Queries
+
+Se definen con el formato de la versión 2 con la etiqueta **link**. Por ejemplo, en el **header**:
+
+```html
+ <link rel="stylesheet" media="print" href="css/print.css">
+```
+
+Y en el css:
+
+```css
+@page {
+  size: A4;
+}
+
+body {
+  font-size: 12pt; 
+  font-family: serif;
+  background-color: #000;
+  color: #fff;
+}
+```
+
+Se usa puntos -pt- porque se imprime con el software de Microsoft Word que trabaja con pt como medida
+
 ---

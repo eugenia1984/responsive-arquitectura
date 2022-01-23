@@ -63,6 +63,7 @@
 }
 
 img,
+iframe,
 video {
   max-width: 100%;
   height: auto;
@@ -84,4 +85,9 @@ video {
 .aspect-ratio-16-9 {
   background-color: var(--red);
   aspect-ratio: 16/9;
+}
+
+.aspect-ratio-1-1 {
+  padding-top: 3rem;
+  aspect-ratio: 1/1;
 }
