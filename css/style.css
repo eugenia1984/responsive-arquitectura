@@ -1,0 +1,37 @@
+:root {
+  --orangered: rgb(199, 57, 25);
+  --white: #fff;
+}
+
+[class^="box"] {
+  background-color: var(--orangered);
+  margin: 3rem auto;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+}
+
+.box-flexible {
+  width: 50%;
+  height: 20vh;
+}
+
+/*hay que tener cuidado al utilizar maximo y minimos y una altura base*/
+.box-flexible-2 {
+  max-width: 960px;
+  min-width: 120px;
+  max-height: 480px;
+  min-height: 120px;
+}
+
+.box p,
+.box-flexible p,
+.box-flexible-2 p {
+  color: var(--white);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 0.25rem;
+  text-align: center;
+}
