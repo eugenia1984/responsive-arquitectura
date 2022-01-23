@@ -214,4 +214,6 @@ body {
 
 Se usa puntos -pt- porque se imprime con el software de Microsoft Word que trabaja con pt como medida
 
+- Otro modo es con el **css** con las **@media**
+
 ---

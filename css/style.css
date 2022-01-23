@@ -91,3 +91,16 @@ video {
   padding-top: 3rem;
   aspect-ratio: 1/1;
 }
+
+@media print  {
+  @page {
+    size: A5 landscape;
+  }
+  
+  body {
+    font-size: 10pt; 
+    font-family: serif;
+    background-color: #000;
+    color: #eef10f;
+  }
+}
