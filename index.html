@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curso Responsive Design y Arquitectura CSS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+  <!-- CSS inicial, para reseteos y display general-->
   <link rel="stylesheet" href="css/init.css">
   <!--CSS to print-->
   <link rel="stylesheet" media="print" href="css/print.css">
+  <!--CSS para armar un grid system-->
+  <link rel="stylesheet" href="css/grid.css">
   <!--My CSS-->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -338,6 +341,7 @@
       <p>1200px / 16px = 75em</p>
     </article>
     <hr>
+    <!---- VIEWPORT ---->
     <article id="viewport" class="full-screen">
       <h2><i>Viewport</i></h2>
       <p> El <i>viewport</i> fue introducido por <i>Apple</i> en <i>Safari</i> móvil, para ayudar a mejorar la presentación de los sitios en dispositivos como el <i>iPhone</i>, <i>iPod Touch</i> o <i>iPad</i>; posteriormente se volvió un estándar en todos los navegadores. </p>
@@ -360,8 +364,30 @@
       <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</code></pre>
     </article>
     <hr>
+    <!---- GRID ---->
     <article id="responsive-grid" class="full-screen">
       <h2><i>Responsive Grid</i></h2>
+      <section class="row">
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 1</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 2</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 3</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 4</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 5</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 6</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 7</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 8</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 9</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 10</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 11</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 12</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 13</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 14</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 15</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 16</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 17</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 18</article>
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 19</article>
+      </section>
     </article>
     <hr>
     <article id="feature-queries" class="full-screen">

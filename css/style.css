@@ -54,9 +54,7 @@
   height: 20vh;
 }
 
-.box p,
-.box-flexible p,
-.box-flexible-2 p {
+.box p, .box-flexible p, .box-flexible-2 p {
   color: var(--white);
   font-size: 1.25rem;
   line-height: 1.5;
@@ -64,9 +62,7 @@
   text-align: center;
 }
 
-img,
-iframe,
-video {
+img, iframe, video {
   max-width: 100%;
   height: auto;
 }
@@ -95,9 +91,7 @@ video {
 }
 
 @media print  {
-  @page {
-    size: A5 landscape;
-  }
+  @page {  size: A5 landscape;}
   
   body {
     font-size: 10pt; 
@@ -132,9 +126,7 @@ salvo que en el sistema operativo ya tenga determinado el modo oscuro, entonces 
 /*Para las medidas responsibles, mobile first, como los frameworks, estilo bootstrap*/
 /*Mobile First, se usa min-width*/
 @media screen and (min-width: 480px) {
-  html {
-    background-color: lightpink;
-  }
+  html {  background-color: rgba(255, 182, 193, 0.795);}
 }
 /*Desktop First, se usa max-width: @media screen and (max-width: 1024px) {...}*/
 /* Un ejemplo

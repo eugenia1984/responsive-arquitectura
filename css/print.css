@@ -1,6 +1,4 @@
-@page {
-  size: A4;
-}
+@page {  size: A4;}
 
 body {
   font-size: 12pt; /*se usa puntos -pt- porque se imprime con el software de Microsoft Word que trabaja con pt como medida*/

@@ -11,11 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
+*, *::after, *::before {  box-sizing: inherit;}
 
 a {
   color: var(--css-color);
@@ -38,15 +34,12 @@ table {
   border-collapse: collapse;
 }
 
-th,
-td {
+th, td {
   border: thin solid grey;
   padding: 0.5rem;
 }
 
-[id] {
-  scroll-margin-top: 2ex;
-}
+[id] {  scroll-margin-top: 2ex;}
 
 .top-btn {
   position: fixed;
@@ -76,9 +69,7 @@ td {
   min-height: 100vh;
 }
 
-.w-75 {
-  max-width: 75%;
-}
+.w-75 {  max-width: 75%;}
 
 @media screen and (min-width: 768px) {
   .grid-1-2 {
@@ -86,7 +77,5 @@ td {
     grid-template-columns: 50% 50%;
   }
 
-  .grid-1-2 > * {
-    padding: 1rem;
-  }
+  .grid-1-2 > * {  padding: 1rem;}
 }

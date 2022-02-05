@@ -312,7 +312,16 @@ Si es por ejemplo un e-comerce, si le sacas el zoom, podes perder al cliente.
 
 El **width** e **initial-scale** son muy importantes para que el contenido se adapte al tamaño del dispositivo.
 
+
+Separados por **coma** puedo utilizar más de un viewport.
+
 ---
 
+## Responsive Grid
 
+Como los Framework de Bootstrap y Foundation tienen las 12 columnas.
+
+El primero de todos fue 960 grid system, centraba el sitio a 960 px y dejaba margen derecho e izquierdo para llegar a los 1024px. En este caso usaban 16 y 12, que eran multiples muy fáciles para dividir en columnas. Y al final se quedaron con las **12 columnas**.
+
+---
 
