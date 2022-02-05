@@ -117,10 +117,7 @@ salvo que en el sistema operativo ya tenga determinado el modo oscuro, entonces 
 }
 /*Para generar estilos en modo claro*/
 @media screen and (prefers-color-scheme: light) {
-  html {
-    background-color: var(--white);
-    color: var(--black);
-  }
+  html { background-color: var(--white); color: var(--black);}
 }
 
 /*Para las medidas responsibles, mobile first, como los frameworks, estilo bootstrap*/
@@ -139,32 +136,43 @@ salvo que en el sistema operativo ya tenga determinado el modo oscuro, entonces 
 
 /*Para aplicar el estilo cuando SI soporte una determinada caracterísitca, en este caso: subgrid*/
 @supports (grid-template-columns: subgrid) {
-  html {
-    background-color: var(--black);
-    color: var(--greenyellow);
-  }
+  html {  background-color: var(--black); color: var(--greenyellow);}
 }
 
 /*Para aplicar estilos cuando NO soporta una determinada característica*/
 @supports not (grid-template-columns: subgrid) {
-  html {
-    background-color: var(--white);
-    color: var(--red-dark);
-  }
+  html { background-color: var(--white); color: var(--red-dark); }
 }
 
 /*Se va a ver en FireFox que soporta ambas*/
 @suports (display:grid) and (grid-template-columns:subgrid) {
-  html {
-    background-color: darkslateblue;
-    color: lightseagreen;
-  }
+  html {  background-color: darkslateblue; color: lightseagreen;}
 }
 
 /*Se va a ver tanto en FireFox, como en Chrome, porque al poner el OR debe cumplir con al menos una, por eso afecta a Chrome*/
 @suports (display:grid) or (grid-template-columns:subgrid) {
-  html {
-    background-color: var(--white);
-    color: var(--black);
-  }
+  html {  background-color: var(--white); color: var(--black);}
+}
+
+/*Tarjeta con ejemplo de containers queries*/
+.card {
+  border: thin solid var(--black);
+  margin-left: auto;
+  margin-right: auto;
+  max-width:  800px;
+  contain: layout inline-size style; /*para aplicar el container query, en el browser Chrome ir a chrome://flags y activarlo. Pero usarlo cuando esté más soportado por los navegadores.*/
+}
+
+.card-image {
+  max-width: 100%;
+  height:  auto;
+  object-fit: cover;
+  object-position: 0 50%;
+}
+
+.card-content { padding: 1rem;}
+
+@container (min-width: 600px) {
+  .card-container {  display: flex;}
+  .card-container>* {  width: 50%; flex-basis: 50%;}
 }

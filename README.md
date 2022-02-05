@@ -411,7 +411,7 @@ Para ver más sobre este tema:
 
 ```
  .card {
-    contain: layout inline-size;
+    contain: layout inline-size style;
   }
 
   @container (min-width: 600px) {
@@ -420,4 +420,142 @@ Para ver más sobre este tema:
     }
   }
 ```
+
+**layout** vas a activar la capacidad de container queries
+
+**inline-size** vas a trabajar con los ejer del contenido
+
+**style** le da la capacidad de poder modificar cualquier propiedad css que este involucrada
+
+En vez de usar @media lo activamos con **@container**. Y si este estilo se lo aplico a un elemento contenedor, entonces los elementos hijos van a heredar el mismo estilo.
+
 --
+
+## SEO : Search Engine Optimization
+
+### Mobilegeddon
+
+Es la actualización al algoritmo de **Google**, que está activo desde el 21 de abril de 2015.
+
+Solo afectan a las busquedas en Google desde el mobil. Siguiendola se sube en el posicionamiento orgánico.
+
+Teniendo en cuenta el auge imparable de los dispositivos móviles y el impacto que éstos están teniendo en las costumbres de uso de la *web*, *Google* hizo un comunicado a través de su [blog oficial](http://googlewebmastercentral.blogspot.com.es/2015/02/finding-more-mobile-friendly-search.html) comentando algunas de las novedades que trae la actualización de su algoritmo.
+
+**Mobilegeddon** pretende actuar sobre todas aquellas webs que no sean amigables con los dispositivos móviles, es decir que no se adapten de forma óptima a dichos dispositivos. 
+
+Dado que las estrategias de *Google* se enfocan cada vez más hacia estos dispositivos, es normal que el buscador quiera asegurarse que las *webs* que indexa cumplen los mínimos de calidad para móviles.
+
+Mobilegeddon, afecta: 
+      
+- Exclusivamente a las búsquedas realizadas desde dispositivos móviles.
+        
+- La aplicación del algoritmo será en todos los idiomas y de forma global.
+
+- No se aplicará a sitios webs completos , sólo a las páginas que no cumplan los criterios.
+
+Buenas prácticas de *SEO* y *Responsive*, según *Google* :
+
+[Guía de Google para sitios móviles](https://developers.google.com/webmasters/mobile-sites/?hl=es)
+
+[SEO para mobiles](https://developers.google.com/webmasters/mobile-sites/mobile-seo/?hl=es)
+
+[Mobile Friendly Tes](https://www.google.com/webmasters/tools/mobile-friendly/)
+
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+
+---
+
+## Estrategias de Diseño Multidispisitivo
+
+Ethan Marcot:
+
+- Grids Flexibles 
+
+- Imágenes Flexibles
+
+- Media Queries
+
+### Destop First (Graceful Degradation) vs Mobile First (Progressive Enhancement)
+
+**Destop First**: las media queries se deben definir de la mayor a menor. Se utiliza la propiedad **max-wodth** para definir las mediaqueries.
+
+Primero diseñas para Desktop y con las mediaqueries adaptas al celular. Esto se usaba antes poque primero se pensaba para ver en computadora.
+
+Se lo nombro degradación elegante porque al pasar de desktop a mobile en general se le iban quitando cosas o contenido a las interfaces para que se vea mejor en celulares.
+
+**Mobile First**: las media queries se deben definir de la menor a la mayor. Se utiliza la propiedad **min-width** para definir las mediaqueries.
+
+Ahora se suele utilizar esta técnica, porque se ve más todo por el celular.
+
+
+### Adaptive Design
+
+Trata de crear interfaces que se adapten a las capacidades y características de cada dispositivo ( Hardware y Software).
+
+Utiliza programación JavaScript para los cambios en la interfaz.
+ 
+Además podría tener diferentes fronts dependiendo de los dispositivos que soliciten el recurso, por ejemplo: 
+
+[Facebook Desktop](https://facebook.com/) 
+
+[Facebook Mobile](https://m.facebook.com/) 
+
+[Propuesto en el blog](https://blog.easy-designs.net/archives/on-adaptive-vs-responsive-web-design) de [Aaron Gustafson](https://www.aaron-gustafson.com/)
+
+
+Conviene en aplicaciones interactivas, como el ejemplo de Facebook. No sería conveneinte aplicarlo si tenes un sitio informativo.
+
+
+### Responsive Design + Server Side Components  (RESS)
+
+Trata de crear interfaces que se adapten a las capacidades y características de cada dispositivo (Hardware y Software).
+
+Pero a diferencia del *Adaptive Design*i>, la programación que usa esta del lado del servidor. Las interfaces se crean desde el *backend*, lo que permite usar la misma vista (ruta) para todos los dispositivos.
+
+Mandar un front dinamico, sin tener diferentes subdominios.
+
+Fue propuesto por [Luke Wroblewski](https://www.lukew.com/) que escribió un [artículo](https://www.lukew.com/ff/entry.asp?1392). Y tamibén [Getting started with RESS](https://www.creativebloq.com/responsive-web-design/getting-started-ress-5122956).
+
+
+### Responsible Responsive Design
+
+Mientras que el **Responsive Design** se basa en buenas prácticas de *CSS* para adaptar el contenido del documento *HTML* al tamaño de pantalla del dispositivo que lo visualice, el **Responsible Responsive Design** agrega buenas prácticas de programación *JS* no sólo para adaptar el contenido a la pantalla, sino también para mejorar el rendimiento y la carga de la interfaz en el navegador  *web*.
+
+Fue propuesto por [Scott Jehl](https://scottjehl.com/) que se centro en la mejora de las interfaces a partir de la web performance.
+
+
+### Fluid Design
+
+Propuesto por [Trys Mudford](https://www.trysmudford.com/), lo publica en 2020.
+
+Es una técnica de *Responsive Design* que trata de escalar y adaptar el contenido al tamaño de la pantalla, sin la necesidad de ocupar  *media queries*.
+
+En lugar de diseñar para un determinado número de *breakpoints*, el *Fluid Design* crea un sistema dentro del cual los elementos escalan de manera proporcional y fluida.
+
+
+Utiliza características y funciones modernas de *CSS* para hacer fluir las interfaces (sin usar media queries), por ejemplo:
+      
+- Contenedores fluidos
+
+- Textos fluidos
+
+- [Grids responsivas sin media queries](https://youtu.be/inVlqjPNmD8?list=PLvq-jIkSeTUY628cyd9LVbXSXi2xG9mUl&t=858)   
+
+- Uso de funciones como calc, min, max, clamp
+
+- Uso de unidades relativas como: ems, rems, exs, chs, %, unidades de viewport
+
+
+Más información:
+
+[Utopia. Fluid Responsive Design](https://utopia.fyi/)
+
+[Utopia Blog](https://utopia.fyi/blog)
+
+[Designing with fluid type scales](https://utopia.fyi/blog/designing-with-fluid-type-scales/)
+
+[CSS-only fluid modular type scales](https://utopia.fyi/blog/css-modular-scales/)
+
+[Fluid type calculator](https://utopia.fyi/type/calculator/)
+
+---

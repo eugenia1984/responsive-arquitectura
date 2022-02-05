@@ -416,7 +416,7 @@
       <h3>Sintaxis</h3>
       <pre><code class="language-css">
         .card {
-          contain: layout inline-size;
+          contain: layout inline-size style;
         }
 
         @container (min-width: 600px) {
@@ -426,9 +426,20 @@
         }
       </code></pre>
       <h3>Ejemplo</h3>
-      <aside></aside>
+      <aside>
+        <article class="card">
+          <div class="card-container">
+            <img class="card-image" src="img/puesta-sol.jpg" alt="Puesta de sol">
+            <aside class="card-content">
+              <h4 class="card-title">Titulo de la tarjeta</h4>
+              <p class="card-description">Aca va la descripción de la tarjeta</p>
+            </aside>
+          </div>
+        </article>
+      </aside>
     </article>
     <hr>
+    <!--- SEO -->
     <article id="seo" class="full-screen">
       <h2><i>SEO</i></h2>
       <h3><i>Search Engine Optimization</i></h3>
@@ -452,6 +463,7 @@
       </ul>
     </article>
     <hr>
+    <!--- RESPONSIVE DESIGN --->
     <article id="desktop-mobile" class="full-screen">
       <h2><i>Responsive Design</i></h2>
       <p> Es el paradigma actual del diseño <i>web</i>. Son un conjunto de buenas prácticas a nivel de código <i>CSS</i> para adaptar el contenido del documento <i>HTML</i> al tamaño de pantalla del dispositivo que lo visualice. </p>
@@ -467,13 +479,14 @@
         <li><a href="https://alistapart.com/article/responsive-web-design/" target="_blank">Artículo <i>Responsive Design</i></a></li>
         <li><a href="https://abookapart.com/products/responsive-web-design" target="_blank">Libro <i>Responsive Design</i></a></li>
       </ul>
+      <!-- DESKTOP FIRST vs MOBILE FIRST -->
       <h3><i>Desktop First VS Mobile First</i></h3>
       <p> Son las 2 estrategias que tiene el <i>Responsive Design</i> para adaptar el contenido al tamaño de la pantalla, centrándose en los dispositivos con pantalla más pequeña (<i>Mobile First</i>) o a la inversa, centrándose en los dispositivos con pantalla más grande (<i>Desktop First</i>).</p>
       <section class="grid-1-2">
         <article>
           <h3><i>Desktop First</i></h3>
           <h4>(<i>Graceful Degradation</i>)</h4>
-          <p>Las <i>media queries</i> se deben definir de la <b>mayor a la menor</b>.</p>
+          <p>Las <i>media queries</i> se deben definir de la<b>mayor a la menor</b>.</p>
           <p>Se utiliza la propiedad <b><i>max-width</i></b> para definir las <i>mediaqueries</i>.</p>
           <img class="w-75" src="https://jonmircha.com/img/blog/desktop-first.jpg" alt="Desktop First">
         </article>
@@ -487,6 +500,7 @@
       </section>
     </article>
     <hr>
+    <!-- ADAPTIVE DESIGN -->
     <article id="adaptive-design" class="full-screen">
       <h2><i>Adaptive Design</i></h2>
       <p> El <i>Adaptive Design</i>, trata de crear interfaces que se adapten a las capacidades y características de cada dispositivo (<i>Hardware</i> y <i>Software</i>).</p>
@@ -505,6 +519,7 @@
       </ul>
     </article>
     <hr>
+    <!--Responsive Design + Server Side Components  -->
     <article id="ress" class="full-screen">
       <h2><i>Responsive Design + Server Side Components (RESS)</i></h2>
       <p> El <i>Responsive Design + Server Side Components (RESS)</i>, trata de crear interfaces que se adapten a las capacidades y características de cada dispositivo (<i>Hardware</i> y <i>Software</i>).</p>
@@ -521,6 +536,7 @@
       </ul>
     </article>
     <hr>
+    <!--- Responsible Responsive Design  --->
     <article id="responsible-design" class="full-screen">
       <h2><i>Responsible Responsive Design</i></h2>
       <p> Mientras que el <i>Responsive Design</i> se basa en buenas prácticas de <i>CSS</i> para adaptar el contenido del documento <i>HTML</i> al tamaño de pantalla del dispositivo que lo visualice, el <i>Responsible Responsive Design</i> agrega buenas prácticas de programación <i>JS</i> no sólo para adaptar el contenido a la pantalla, sino también para mejorar el rendimiento y la carga de la interfaz en el navegador <i>web</i>.</p>
@@ -532,6 +548,7 @@
       </ul>
     </article>
     <hr>
+    <!-- FLUID DESIGN -->
     <article id="fluid-design" class="full-screen">
       <h2><i>Fluid Design</i></h2>
       <p> El <i>Fluid Design</i> es una técnica de <i>Responsive Design</i> que trata de escalar y adaptar el contenido al tamaño de la pantalla, sin la necesidad de ocupar <i>media queries</i>.
