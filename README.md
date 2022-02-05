@@ -216,4 +216,30 @@ Se usa puntos -pt- porque se imprime con el software de Microsoft Word que traba
 
 - Otro modo es con el **css** con las **@media**
 
+Ademá de las clásicas media queries acorde a la medida de las pantallas, como los de las librerias o frameworks,  como las de Bootstrap que tienen por ejemplo: 
+
+Para los diseños MOBILE FIRST
+```
+@media screen and (min-width: 480px) {...}
+```
+
+Para los diseños DESKTOP FIRST
+```
+@media screen and (max-width: 1024px) {...}
+```
+
+Si se empezo un diseño Mobile First no combinar con el diseño Desktop First sino puede haber inconveniente con los estilos, si se usa min-width al principio usar ese y no el max-width.
+
+Y hay otras menos conocidas, como por ejemplo:
+
+- @media print , para impresion
+
+- @media screen and (prefers-reduced-motion: reduce) { } , para inhabilitar el scroll-behavior: smooth;
+
+- @media screen and (prefers-color-scheme: dark) { }, para hacer el efecto dark
+
+- @media screen and (prefers-color-scheme: light) { }, para hacer el efecto light
+
 ---
+
+## Braekpoints

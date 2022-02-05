@@ -8,6 +8,8 @@
   --red2: #8d0403;
   --red-dark: #77030b;
   --white: #fff;
+  --black: #000;
+  --white: #fff;
 }
 
 [class^="box"] {
@@ -104,3 +106,41 @@ video {
     color: #eef10f;
   }
 }
+
+/* Por default en vez de reduce, los browsers tienen no-preference. Es para los que tienen configurado que no quiere el scroll behavior smooth */
+@media screen and (prefers-reduced-motion: reduce) {
+  scroll-behavior: auto;
+}
+
+/*Media query para light - dark, el modo oscruro. Aca también se puede aplicar no-preference,
+salvo que en el sistema operativo ya tenga determinado el modo oscuro, entonces no se ve el efecto claro*/
+/*Para geenrar estilos en modo oscuro*/
+@media screen and (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--black);
+    color: var(--white);
+  }
+}
+/*Para generar estilos en modo claro*/
+@media screen and (prefers-color-scheme: light) {
+  html {
+    background-color: var(--white);
+    color: var(--black);
+  }
+}
+
+/*Para las medidas responsibles, mobile first, como los frameworks, estilo bootstrap*/
+/*Mobile First, se usa min-width*/
+@media screen and (min-width: 480px) {
+  html {
+    background-color: lightpink;
+  }
+}
+/*Desktop First, se usa max-width: @media screen and (max-width: 1024px) {...}*/
+/* Un ejemplo
+@media screen and (max-width: 480px) {
+  html {
+    background-color: greenyellow;
+  }
+} 
+*/
