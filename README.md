@@ -391,5 +391,33 @@ Antes se utilizaba una librería de Js con modernizer, pero gracias a los standa
 
 ---
 
-## Containers queries
+## Containers queries (Consulta de contenedores)
 
+Otra opción para el Responsive Design, porque como las **media queries** permiten hacer cambios dependiendo dle tamaño de la pantalla o de ciertas aracterísticas del dispositivo en que nos enocntramos y las **feature queries** nos permiten aplicar ciertas reglas css dependiendo del soporte de algunos atributos y propiedades, los **containers queries** nos van a permitir redimensionar un contenido en particular.
+
+Con containers queries se piensa un contenido en componente, en vez de que ele elemento de la interfaz dependa del tamaño de la pantalla, dependa más de sus necesidades, como el ejemplo de una  tarjeta que tiene una imagen en vertical hasta que su tamaño es de 300px y luego esa imagen cambia a un formato  en vertical para mostrar su contenido; va a depender de sus propias necesidades.
+
+Es una propiedad bastante nueva (como la de anidación de cósigo css, como se trabaja con los pre procesadores como SASS) y hay varios navegadores que no lo soportan y en otros está en modo experimental.
+
+Para ver más sobre este tema:
+
+[CSS Container Queries MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries)
+
+[The new responsive](https://web.dev/new-responsive/) 
+
+[Say Hello To CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) 
+
+### Sintaxis
+
+```
+ .card {
+    contain: layout inline-size;
+  }
+
+  @container (min-width: 600px) {
+    .card-container {
+      display: flex;
+    }
+  }
+```
+--
