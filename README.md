@@ -286,4 +286,33 @@ Objetivo en pixeles / Contexto en pixeles = Resultado en **Ems** :
 
 ---
 
+## Viewport
+
+Es una etiqueta que la introdujo Apple, en SAfari para mejorar la presentación de los dispositivos como el iPhone, iPod Touch o iPad.
+
+La etiqueta **viewport** es el área visible de nuestro navegador y permite definir el ancho, alto y escala del area usada por el navegador para mostrrar su contenido.
+
+Tiene 6 atributos importantes:
+
+**width**: define el ancho visible, suele usarse la constante device-width para que se adapte al ancho del dispositivo.
+
+**height**: define el alto visible, suele usarse la constante device-height para que se adapte al alto del dispositivo.
+
+**initial-scale**: define la escala inicial a la que deberá visualizarse el contenido, siendo 1 el 100%.
+
+**minimus-scale**: define la escala mínima a la que se podrá hacer zoom al contenido, por ejemplo si se configura .5 significa que se podrá hacer un zoom de hasta el 50%. Para controlar hasta donde el usuario hace zoom, para que no se rompa la maquetacion.
+
+**maximum-scale**: define la escala máxima a la que se podrá hacer zoom al contenido, por ejemplo si se configura 3 significa que se podrá hacer un zoom de hasta el 300%.
+
+**user-scalable**: define si el usuario puede escalar o no el contenido, sus valores son *yes* por defecto y *no* para bloquear esta propiedad. Es una propiedad booleana. 
+
+Al ponerle no impido que el usuario haga zoom in o zoom out, pero el usuario final está por sobre todos y su interacción es lo más importante, y si le saco el zoom, en un celular no van a poder ampliar la pantalla, lo cual va a ser un inconveniente para alguien con alguna discapacidad visual, lo cual es malo en cuanto a la experiencia de usuario.
+
+Si es por ejemplo un e-comerce, si le sacas el zoom, podes perder al cliente.
+
+El **width** e **initial-scale** son muy importantes para que el contenido se adapte al tamaño del dispositivo.
+
 ---
+
+
+
