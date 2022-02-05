@@ -242,4 +242,48 @@ Y hay otras menos conocidas, como por ejemplo:
 
 ---
 
-## Braekpoints
+## Breakpoints
+
+Están relacionados con las **media queries**, son los puntos de quiebre para determinar que determinado estilo se va a plicar en determinado tiempo, por ejemplo acorde al ancho de la pantalla, si es mobil lo puedo ver de un modo, si es tablet de otro y si es desktop de ootr, si le puse 2 breakpoints.
+
+En el libro de Ethan Marcot ya nos sugería unas medidas para el responsive design:
+
+320px para dispositivos con pantallas pequeñas. como los telefonos en modo vertical
+
+480px para los dispositivos con pantallas pequeñas, como los telefonos en modo horizontal; o los mobiles de gama alta en modo vertical.
+
+600px para tablas pequeñas. como el kindle
+
+768px para tabletas de diez pulgadas como el iPad, en modo vertical
+
+1024px para tablets como el iPad en modo horizontal
+
+1200px para pantallas panorámicas, como laptops o desktops.
+
+En general por más que tenga una pantalla de 1900px, se suele dejar el contenedor a 1200px, para que no tengamos la mala experiencia en la lectura que tengamos que ir moviendonos de un lado para el otro, si se le podria aplicar el maximo de ancho a la hero-image o a algún mensaje que quiera llamar la atención, se le puede poner una imagen de fondo la 100% y el contenido igual que llegue a los 1200px.
+
+El standard de hoy van de 1200px a 1500px.
+
+Hay sitios que suelen aprovechar el 100% de la pantalla, como las páginas de documentaciones, porque suelen tener en la columna izquierda como un indice, en el medio su contenido y en una columna de la derecha algun resumen o algo que quieran destacar.
+
+
+Muy importante **conviete tus breakpoints en pxs a ems**, ya que los pixeles son en medidas absolutas y las computadoras que tiene mayor densidad de pixeles y no se visualizan correctamente. Asi es todo relativo la contenedor en el que está.
+
+
+Objetivo en pixeles / Contexto en pixeles = Resultado en **Ems** : 
+
+- 320px / 16px = 20em
+
+- 480px / 16px = 30em
+
+- 600px / 16px = 37.5em
+
+- 768px / 16px = 48em
+
+- 1024px / 16px = 64em
+
+- 1200px / 16px = 75em
+
+---
+
+---
