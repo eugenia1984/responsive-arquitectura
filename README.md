@@ -323,5 +323,73 @@ Como los Framework de Bootstrap y Foundation tienen las 12 columnas.
 
 El primero de todos fue 960 grid system, centraba el sitio a 960 px y dejaba margen derecho e izquierdo para llegar a los 1024px. En este caso usaban 16 y 12, que eran multiples muy fáciles para dividir en columnas. Y al final se quedaron con las **12 columnas**.
 
+
+Tamaño (media queries) - Grid artesanal
+
+xs - extrasmall -     0     -   479px   - 480res
+
+sm -  small  -   480(30em)  -   767px   - 800res
+
+md -  medium  - 7968px(48em) -   991px  - 800res
+
+lg -  large  -  992px(62rem) -  1199px  - 1280res
+
+xl - extralarge - +1200px(75em)          - 1281res
+
 ---
+
+## Feature queries
+
+Son reglas *CSS* que le preguntan al navegador si soportan o no, una determinada propiedad o valor. 
+
+Por ejemplo:
+
+```
+ @supports (display: grid) {
+  /* 
+      Código CSS que se aplicará cuando se cumpla la feature queries
+  */
+}
+```
+
+```
+@supports (grid-template-columns: subgrid) {
+  html {
+    background-color: var(--black);
+    color: var(--greenyellow);
+  }
+}
+```
+
+Para aplicar estilos cuando NO soporta una determinada característica, se utiliza **not**
+
+```
+@supports not (grid-template-columns: subgrid) {
+  html {
+    background-color: var(--white);
+    color: var(--red-dark);
+  }
+}
+```
+
+Como son condiciones lógicas, puedo hacer más de una condición, por ejemplo:
+
+Al utilizar el **AND**, ambas condiciones deben ser verdaderas para aplicar los estilos
+
+```
+@suports (display: grid) and (grid-template-columns:subgrid) {...}
+```
+
+Al utilizar **OR**, solo debe soportar uuna de las condiciones, por ejemplo:
+```
+@suports (display:grid) or (grid-template-columns:subgrid) {..}
+```
+
+Para ver si las propiedades son soportadas por los navegadores se pueden ver en la web de [Can I Use](https://caniuse.com)
+
+Antes se utilizaba una librería de Js con modernizer, pero gracias a los standares de CSS nuevos, con las features queries ya le damos el soporte.
+
+---
+
+## Containers queries
 

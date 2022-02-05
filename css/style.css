@@ -1,15 +1,15 @@
 :root {
-  --yellow: #feee10;
-  --yello2: #ffab00;
-  --yellow3: #ff8700;
+  --black: #000;
+  --greenyellow: #adff2f;
   --orange: #fd6100;
   --orange2: #fd6100;
   --red: #f10c0c;
   --red2: #8d0403;
   --red-dark: #77030b;
   --white: #fff;
-  --black: #000;
-  --white: #fff;
+  --yellow: #feee10;
+  --yello2: #ffab00;
+  --yellow3: #ff8700;
 }
 
 [class^="box"] {
@@ -136,3 +136,35 @@ salvo que en el sistema operativo ya tenga determinado el modo oscuro, entonces 
   }
 } 
 */
+
+/*Para aplicar el estilo cuando SI soporte una determinada caracterísitca, en este caso: subgrid*/
+@supports (grid-template-columns: subgrid) {
+  html {
+    background-color: var(--black);
+    color: var(--greenyellow);
+  }
+}
+
+/*Para aplicar estilos cuando NO soporta una determinada característica*/
+@supports not (grid-template-columns: subgrid) {
+  html {
+    background-color: var(--white);
+    color: var(--red-dark);
+  }
+}
+
+/*Se va a ver en FireFox que soporta ambas*/
+@suports (display:grid) and (grid-template-columns:subgrid) {
+  html {
+    background-color: darkslateblue;
+    color: lightseagreen;
+  }
+}
+
+/*Se va a ver tanto en FireFox, como en Chrome, porque al poner el OR debe cumplir con al menos una, por eso afecta a Chrome*/
+@suports (display:grid) or (grid-template-columns:subgrid) {
+  html {
+    background-color: var(--white);
+    color: var(--black);
+  }
+}
