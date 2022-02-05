@@ -57,6 +57,9 @@ Aprecio tu interés por este repositorio ⌨️ con ❤️ de [María Eugenia Co
 
 # Acá voy a ir dejando notas de la teoría
 
+
+## :book: REsponsive Design
+
 ## Un poco de historia
 
 - En 1998 teníamos a **WML** ( Wireless Markup Languaje ) y a **WPA** ( Wireless Application Protocol) como protocolos que permiten visualizar el contenido, son hermanos de xml y html. Salen los primeros celulares.
@@ -344,7 +347,7 @@ Son reglas *CSS* que le preguntan al navegador si soportan o no, una determinada
 
 Por ejemplo:
 
-```
+```CSS
  @supports (display: grid) {
   /* 
       Código CSS que se aplicará cuando se cumpla la feature queries
@@ -352,7 +355,7 @@ Por ejemplo:
 }
 ```
 
-```
+```CSS
 @supports (grid-template-columns: subgrid) {
   html {
     background-color: var(--black);
@@ -363,7 +366,7 @@ Por ejemplo:
 
 Para aplicar estilos cuando NO soporta una determinada característica, se utiliza **not**
 
-```
+```CSS
 @supports not (grid-template-columns: subgrid) {
   html {
     background-color: var(--white);
@@ -409,7 +412,7 @@ Para ver más sobre este tema:
 
 ### Sintaxis
 
-```
+```CSS
  .card {
     contain: layout inline-size style;
   }
@@ -557,5 +560,298 @@ Más información:
 [CSS-only fluid modular type scales](https://utopia.fyi/blog/css-modular-scales/)
 
 [Fluid type calculator](https://utopia.fyi/type/calculator/)
+
+
+Ejemplo en codigo para hacer una **grid fluida**
+
+```CSS
+.fluid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+```
+
+```HTML
+<section class="fluid-grid">
+  <article class="fluid-item">Elemento 1</article>
+  <article class="fluid-item">Elemento 2</article>
+  <article class="fluid-item">Elemento 3</article>
+  <article class="fluid-item">Elemento 4</article>
+  <article class="fluid-item">Elemento 5</article>
+  <article class="fluid-item">Elemento 6</article>
+  <article class="fluid-item">Elemento 7</article>
+  <article class="fluid-item">Elemento 8</article>
+  <article class="fluid-item">Elemento 9</article>
+  <article class="fluid-item">Elemento 10</article>
+  <article class="fluid-item">Elemento 11</article>
+</section>
+```
+
+Ejemplo en código de **texto fluido**:
+
+```CSS
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --step--2: clamp(0.91rem, 0.89rem + 0.10vw, 0.96rem);
+  --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.20rem);
+  --step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.50rem);
+  --step-1: clamp(1.58rem, 1.46rem + 0.59vw, 1.88rem);
+  --step-2: clamp(1.89rem, 1.71rem + 0.89vw, 2.34rem);
+  --step-3: clamp(2.27rem, 2.01rem + 1.29vw, 2.93rem);
+  --step-4: clamp(2.72rem, 2.36rem + 1.83vw, 3.66rem);
+  --step-5: clamp(3.27rem, 2.75rem + 2.56vw, 4.58rem);
+}
+
+.step--2 {font-size: var(--step--2);}
+.step--1 {font-size: var(--step--1);}
+.step-0 {font-size: var(--step-0);}
+.step-1 {font-size: var(--step-1);}
+.step-2 {font-size: var(--step-2);}
+.step-3 {font-size: var(--step-3);}
+.step-4 {font-size: var(--step-4);}
+.step-5 {font-size: var(--step-5);}
+```
+
+```html
+<p class="step--2">Step -2</p>
+<p class="step--1">Step -1</p>
+<p class="step-0">Step 0</p>
+<p class="step-1">Step 1</p>
+<p class="step-2">Step 2</p>
+<p class="step-3">Step 3</p>
+<p class="step-4">Step 4</p>
+<p class="step-5">Step 5</p>
+```
+
+Un hack para hacer el mismo efecto, pero sin generar tantas clases, que lo usa Ethan Marcott.
+
+```CSS
+body {
+  /*
+    14 = tamaño de letra más pequeño que quieras para tu sitio
+    18 = el tamaño de letra más grande que quieras para tu sitio
+    1400 = tamaño de viewport más grande
+    300 = tamaño de viewport más pequeño, el tamaño de pantalla al que el texto deja de fluir
+  */
+  font-size: calc(14px + (18-14)*((100vw-300px)/(1400-300)));
+}
+```
+
+
+Ejemplo en código de **contenedores fluidos**:
+
+```CSS
+.box-fluid {
+  width: clamp(400px, 660vw, 600px);
+  height: clamp(200px, 30vh, 300px);
+}
+```
+
+Le agrego un background-color a .blck-flid para poder verlo más estacado en la web
+
+```html
+<div class="box-fluid"></div>
+```
+
+---
+
+# :book: Arquitectura de CSS
+
+[Slides](https://jonmircha.com/css)
+
+- Escribir CSS es fácil, escalarlo y amntenerlo no tanto.
+
+- Para mantener organizado nuestro código necesitamos un plan -> **Arquitectura css**
+
+### ¿ Qué es la arquitectura ?
+
+Arte y técnica de diseñar, proyectar y contruir edificios y espacios públicos.
+
+-> aplicando el concepto a CSS : *Técnicas que nos ayudan a organizar y mantener nuestro código ordenado, óptimo y escalable*.
+
+Una buena arquitectura de CSS debe saer:
+
+
+- Predecible: las reglas se van a comportar como esperas que lo hagan, si aplicas una nueva característica, que solo afecte a lo que quieres modificar, que no modifique lo que ya tenías anteriormente. Ejemplos de esto son Bootstrap y Tailwind que son utility first, afectan un solo valor de CSS, o me cambian el tamaño e la fuente, o me cambia el color, me pone el texto en negrita.
+
+- Reutilizable: se puede utilizar en distintas secciones o elementos, de forma rápida y sin afectar a otros elementos. También como le ejemplo de Bootstrap con btn-info que solo me cambia el color.
+
+- Estable: deberíamos de poder actualizar sin poder afectar otras reglas.
+
+- Escalable: que permita crecer y el cósigo sea fácil de mantener.
+
+### Debemos diseñar sistemas, no páginas
+
+base + layout + module + state (hover, focus, diseble) + theme ( light / black)
+
+Diseña de lo general, todos tienen cabecera, menu de navegacion, se adaptan por columnas, vas a ir de lo general y al pasar de un proyecto a otro solo personalizas detalles.
+
+**Componentes** Nicole Sullivan "It's repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS and possible JS".
+
+Esto ya lo vemos dentro de Bootstrap que ya nos ofrece botones, barras de navegación, por ejemplo.
+
+
+**Divide y venceras**
+
+**D:R:Y: - Don't repeat yourself**
+
+- cumple una sola función
+
+- es independiente, si lo quito de la interfaz no la afecta y si le voy agregando cosas a la interfaz tampoco se ve afectado.
+
+- es autocontenido, no permiten que elementos externos afecten su estructura interna y sus componentes internos no afectan a componentes externos.
+
+- es reutilizable, puedo usarlo en otro proyecto, customizando los colores de identidad de marca.
+
+Que solo hagan una cosa, y que la hagan muy bien.
+
+Por ejemplo, is eo un header, voy a encontrar: logo, menu block (las tabs), search block (la parte de busqueda) y authblock (la parte de registrarse con usuario, clave y el boton de logueo.).
+
+### Herramientas CSS para crear sistemas
+
+#### 1.Metodologías:
+
+Nos permiten organizar y nombrar el código.
+Son las buenas prácticas, la forma de organizar el código, como guardarlos.
+
+[BEM](https://en.bem.info/) Bloque Evento y Modificador.
+
+Bloque = un componente reutilizable en un a página con una funcionalidad independiente. Un ejemplo es ponerle a la clase el nombre de *error* en vez de *red-text*. Tamibén podés utilizar las clases: *header*, *logo*, *search-form*.
+
+Elemento = una pequeña parte de ese bloque principal. Un ejemplo es el logotipo dentro de una cabecera. Ejemplo en la clase sería *search-form__input* con el doble guion bajo indico que viene el elemento. Otro ejemplo es *sarch-form__button*.
+
+Modificador = Ejemplo *search-form__button search-form__button_disabled*, el guión bajo indica el modificador. Otro ejemplo: *search-form__button search-form__button_size_s*
+
+Es la más utilizada, pero queda bastante berboso con la clase larga que queda.
+
+[SMACSS](http://smacss.com/) Scalable and modular architecture for CSS.
+
+En el link vas a poder leer el libro on line.
+
+Va a separar en capas los estilos de CSS, tiene los estilos bases / layout / modulo (componente: header, footer, etc) / state rules (con los estados: hover, habilitado, focus) / theme rules ( modo dark - light) / changing states (cambio, como por ejemplo lo del menu hamburguesa).
+
+Se lo conoce como 7 en 1: base / lauout / modulos /  estados / temas / cambios / estilos particulares del proyecto
+
+
+[OOCSS](http://oocss.org/) CSS orientado a objetos, se piensa que todo es un objeto, es como el concepto de componente / bloque / modulos. Un ejemplo es cada parte, cada elemento.
+
+[ITCSS](https://itcss.io/) it css (a sane scalable, managed CSS architecture from CSS Wizardry). Es un triangulo a la inversa, parte de lo general e irnos hacia lo especifico. 
+
+generico -> elementos -> objetos -> componentes -> utilidades
+
+[AMCSS](https://amcss.github.io/) Attribute Modules dor CSS, utiliza data attributes de HTML, necesita internamente una librería JS que lo haga funcionar; inclusive a algunos data atrributes les da valor. En definitiva aca le agregamos JS.
+
+[SUITCSS](https://suitcss.github.io/) Style Tools for UI components, es similar a BEM, solo que lo que BEM llama bloque aca se llama componente, y lo que llama modificador aca se llama asi: *in-animating* y *.MyComponent-part*. EL selector se escribie en UpperCamelCase. Integra las clases utilitarias, entonces por ejemplo tiene *u-textTruncate*, *u-sizeFit*, todo lo que comienza con *u-* es una clase utilitaria.
+
+Y si usas un preprocesador
+
+```CSS
+/* npm-installed dependency */
+@import "suitcss-utils-text";
+/* local dependecy */
+@import "/Button":
+
+.MyComponent{}
+```
+
+[Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
+Parte de la tabla periodica de los elementos de HTMl que hizo Josh Duck. Y dice que en el diseño atomico hay que pensar en 5 principios:
+
+1- Atomos:  las etiquetas html solas
+
+2- Moleculas: conjunto de átomos, por ejemplo un label, un input text y un boton que nos dan un componente de busqueda en un header, por ejemplo.
+
+3- Organismos: estructuras más complejas, como una cabecera
+
+4- Templates: cuando se diseñan los wire frames, se dibujan las aereas de donde va a ir el contenido, con lapiz y papel o con Figma o alguna otra herramienta.
+
+5- Páginas: reemplazar por el contenido original
+
+[Pattern Lab](https://patternlab.io/) son componentes, un repositorio de Pat Frost.
+
+[Demos](https://demo.patternlab.io/)
+
+
+#### 2.Frameworks:
+
+Son marcos de trabajo que nos ofrecen componentes y utilidades de UI, que nos permiten no empezar desde cero un proyecto, nos ofrecen su hoja de estilos y el JS, tiene un starter templates.
+
+[960 Grid System](https://960.gs/)  es el padre de todos, empezo por el 2009- 2010, en ese momento no habia responsive design, la resolucion era de 960px y los que sobraban iban hacia los costados. Tenia grid de 12 y de 16 columnas. Estaba basado en floats.
+
+[Skeleton](http://getskeleton.com/) es un boilerplate (un kit de inicio), es más sencillo. También tiene la reticula de 12 columnas, botones, elementos de formulario. Le siguen dando mantenimiento.
+
+[Pure CSS](https://purecss.io/) Esta dividido en: base / grids / formulario / botones / tablas / menues; va separando en capas el código css, puedo usar algunos componentes y los que no uso los saco. Es herramienta minumalista, es más una librería.
+
+[Ink](https://ink.sapo.pt/) no es de los más populares, tien sus propios nombres de clases, se puede descargar el cósigo fuente y modificarlo (por ejemplo le puedo cambiar los breakpoint y las media queries).
+
+[MUI](https://www.muicss.com/) basado en Material Design, si trabajas con Angular, React,  View  o Web Components, lo podes incorporar a tu stack de trabajo. También para email marketing.
+
+[Semantic UI](https://semantic-ui.com/) utiliza las etiquetas semanticas, los elements son los componentes. 
+
+Estos que siguen son los que más se usan:
+
+[Bootstrap](https://getbootstrap.com/) es de los más utilizados, tiene muchos componentes y utilidades que son responsivas. Tiene accesibilidad HTML.
+
+[Tailwind CSS](https://tailwindcss.com/) viene creciendo bastante su uso.
+
+[Foundation](https://get.foundation/) Tiene accesibilidad HTML.
+
+[Materialize CSS](https://materializecss.com/) implementa el lenguaje visual de Google, solo tiene la version 0 y la 1. Fue el primer framework que dejo de usar jQuery, solo se necesitaba al hoja de CSS y de JS. Se usa mucho para los **componentes de formulario**.
+
+[UI kit](https://getuikit.com/) se utiliza bastante con React. Va ganando adeptos. Es parecido a MUI, es facil de implementarlo a un stack de REact, sus dependencias son el codigo CSS y JS y otro archivo para los iconos. Tiene muchos componentes. En vez de usar nombres genericos sus clases comienzan con *uk-*. Se parece a una interfaz Android. El codigo fuente esta escrito con Less y SASS por si lo queres personalizar. Esta separado en capas.
+.
+[Bulma](https://bulma.io/) Tiene buenas practicas, no te da componentes a nivel de JS (pero si te deja en vanilla Js la sugerencia por si se lo queres agregar), es puro CSS. Es del grupo del creador de VUE JS. Tiene accesibilidad HTML. Podes acceder al codigo nativo armado en SASS para modificarlo.
+
+#### 3.Procesadores:
+
+Pre procesadores: Son herramientas que toman un lenguaje y lo transforman en CSS.
+
+[Sass](https://sass-lang.com/)
+
+[Less](https://lesscss.org/)
+
+[Stylus](https://stylus-lang.com/)
+
+Post procesadores: Son herramientas que procesan el CSS y lo optimizan y automatizan.
+
+[Post CSS](https://postcss.org/)
+
+[CSS Next](https://cssnext.github.io/)
+
+[CSS in JS](https://cssinjs.org/?v=v10.9.0)
+
+Herramientas de Automatización:
+
+Build Tools: Node.js / Grunt / Gulp / Webpack
+Online Tools: Code Pen / JS Bin / Autoprefixer CSS / CSS Minifier
+
+#### 4.Guías de Estilos
+
+Colección de elemento y reglas pre establecidas que aseguran la consistencia y coherencia de nuestro código.
+
+[Code Guide](https://codeguide.co/)
+
+[W3C Design System](https://design-system.w3.org/)
+
+[Website Style Guide](http://styleguides.io/)
+
+[Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
+
+[Idiomatic CSS](https://github.com/necolas/idiomatic-css)
+
+[CSS Guidelines](https://cssguidelin.es/)
+
+### Arquitectura minimalista
+
+```CSS
+/* ********** Custom Properties ********** */
+/* ********** Reset ********** */
+/* ********** Components ********** */
+/* ********** Utilities ********** */
+/* ********** Site Styles ********** */
+```
+
+[Más información en estado de CSS](https://2020.stateofcss.com/es-ES/technologies/)
 
 ---
