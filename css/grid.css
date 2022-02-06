@@ -24,7 +24,9 @@ html {
   font-size: 16px;
 }
 
-*, *::after, *::before {  box-sizing: inherit;}
+*, 
+*::after, 
+*::before {  box-sizing: inherit;}
 
 .row {
   display: flex; /*en automatico sus hijos se van a agrupar en una misma fila, ignoran el ancho*/

@@ -873,17 +873,33 @@ Online Tools:
 
 Colección de elemento y reglas pre establecidas que aseguran la consistencia y coherencia de nuestro código.
 
-[Code Guide](https://codeguide.co/)
+Se definen los lineamientos de lo que se va a utilizar, cómo se generan las funciones, los selectores en la hoja de estilo, como se da el formato a las imágenes a utilizar; se aplican a todas los lenguajes y tecnologías.
 
-[W3C Design System](https://design-system.w3.org/)
+Algunas que se utilizan bastante son:
 
-[Website Style Guide](http://styleguides.io/)
+[Code Guide](https://codeguide.co/) estandares para desarrollar css de manera sostenible, tiene un temario, la sintaxis y el ejemplo.
 
-[Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
+Dice que el orden correcto de las propiedades de css es:
 
-[Idiomatic CSS](https://github.com/necolas/idiomatic-css)
+1-posisionamiento: position / top / rigth / bottom / left / z-index.
 
-[CSS Guidelines](https://cssguidelin.es/)
+2-box model: display / float / width / height .
+
+3-typografía: font / line-height / color / text-align
+
+4- visual: background-color / border / border-radius
+
+5- misc : opacity
+
+[W3C Design System](https://design-system.w3.org/) es la propuesta de sistema de diseño de la W3C.
+
+[Website Style Guide](http://styleguides.io/) un repositorio con varias guias de estilos de distintos sitios (recopilación de guias de estilos).
+
+[Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css) es la guía de estilos de Airbnb.
+
+[Idiomatic CSS](https://github.com/necolas/idiomatic-css) creada por **necolas** (el que creo Normalize). 
+
+[CSS Guidelines](https://cssguidelin.es/) es fácil de entender, tiene ejemplo de código.
 
 ### Arquitectura minimalista
 

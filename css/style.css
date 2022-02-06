@@ -54,7 +54,9 @@
   height: 20vh;
 }
 
-.box p, .box-flexible p, .box-flexible-2 p {
+.box p, 
+.box-flexible p, 
+.box-flexible-2 p {
   color: var(--white);
   font-size: 1.25rem;
   line-height: 1.5;
@@ -62,7 +64,9 @@
   text-align: center;
 }
 
-img, iframe, video {
+img, 
+iframe, 
+video {
   max-width: 100%;
   height: auto;
 }
