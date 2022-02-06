@@ -891,6 +891,10 @@ Dice que el orden correcto de las propiedades de css es:
 
 5- misc : opacity
 
+Dice que es preferible usar <link> en vez de @import.
+
+Es de Mark Otto (mdo en twitter, creador de bootstrap).
+
 [W3C Design System](https://design-system.w3.org/) es la propuesta de sistema de diseño de la W3C.
 
 [Website Style Guide](http://styleguides.io/) un repositorio con varias guias de estilos de distintos sitios (recopilación de guias de estilos).
@@ -903,13 +907,38 @@ Dice que el orden correcto de las propiedades de css es:
 
 ### Arquitectura minimalista
 
+Jon no suele utilizar ni pre ni post procesadores, utiliza css puro.
+
+Usa una sola hoja de estilos y la divide así
+
 ```CSS
 /* ********** Custom Properties ********** */
+
 /* ********** Reset ********** */
+
 /* ********** Components ********** */
+
 /* ********** Utilities ********** */
+
 /* ********** Site Styles ********** */
 ```
+
+**Custom Properties** son las variables de CSS que va a utilizar (las que van en **:root**).
+
+**Reset** para tener margin y padding 0, ya que acorde al navegador unos tiene los 8px, y el *box-sizing* con *border-box*.
+
+**Components** como header, nav, una card, un boton.
+
+**Utilities**, una regla que solo modifica un atributo de css.
+
+**Site Styles** los estilos particulares del proyecto, el detalle y personalización de cada uno.
+
+De este modo se diseña pensando en sistemas y no en páginas: base + layout + module + state + theme
+
+Lo único que iría variando de proycto a otro es el *site style* y me armo como mi propia librería, puedo reutilizar código.
+
+Salvo que uno trabaje en un equipo, ahi te vas a tener que amoldar a lo que usa el equipo. Pero, si trabajas de forma freelance o tenes tus proyectos ahi si sería de ayuda utilizar esta arquitectura minimalista.
+
 
 [Más información en estado de CSS](https://2020.stateofcss.com/es-ES/technologies/)
 
