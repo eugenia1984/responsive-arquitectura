@@ -791,11 +791,19 @@ Son marcos de trabajo que nos ofrecen componentes y utilidades de UI, que nos pe
 
 Estos que siguen son los que más se usan:
 
-[Bootstrap](https://getbootstrap.com/) es de los más utilizados, tiene muchos componentes y utilidades que son responsivas. Tiene accesibilidad HTML.
+[Bootstrap](https://getbootstrap.com/) es de los más utilizados, tiene muchos componentes y utilidades que son responsivas. Tiene accesibilidad HTML. En la nueva versión le agregaron hasta iconos, que podes copiar como etiqueta svg, como icono; tienen igonos de interfaz de usuarios y de las redes sociales. La documentación es completa y muy clara. Brinda un starter template. Trae un flujo para instalarlo y configurarlo con Webpack. Su código fuente esta escrito en SASS, lo puedes personalizar, está separado en capas. Utiliza :roots (custom properties, por ejemplo con los colores). La grid de bootstrap funciona con flex box (con las clases row y col, y los breakpoints que tiene). 
 
-[Tailwind CSS](https://tailwindcss.com/) viene creciendo bastante su uso.
+Tiene gran cantidad de componentes. Hay una parte específica para los formularios. Y tiene clases auxiliares (**helpers**), por ejemplo con el posicionamiento sticky que además lo puedo personalizar acorde al breakpoint, por ejemplo lo puedo hacer sticky en sm y fixed en md. **FlexBoxx** tiene mapeadas todas sus propiedades, y además están personalizadas acorde al tamaño de la media query. También hay una parte de **padding** y **margin**. También tiene **gap**.
 
-[Foundation](https://get.foundation/) Tiene accesibilidad HTML.
+Tiene buenas prácticas e accesibilidad, como rol, area-label. Lo único que tiene como negativo es que utiliza bastantes div, en vez de etiquetas semánticas.
+
+Es un framework utility first.
+
+Lo único que tendría como para mejorar es que las media queries siguen siendo en px, en vez de en ems.
+
+[Tailwind CSS](https://tailwindcss.com/) viene creciendo bastante su uso, tiene pocos años y va ganando popularidad ya que es fácil de implementar en cualquier flujo de trabajo. Es utility first, sus clases aplican a una sola propiedad de CSS (x ej aplica un color de letra, cambia el tamaño de la letra, agrega un padding). Es responsivo. También se puede instalar via npm, tiene hasta su propia lista de comandos; pero también podés incluirlo con CDN. Está muy integrado, con Vue, Gatsby, Nextjs, Laravel, Create Real App, por ejemplo.
+
+[Foundation](https://get.foundation/) Tiene accesibilidad HTML. Tiene bastantes años. Sirve para email marketing y otra versión para sitios. Es semántico, mobile first, configurable. Todas las secciones tienen video tutoriales, además de la documentación y las referencias a SASS (porque podes descargarlo y personalizarlo). Tiene muchos elementos. Está separado en capas: utilidades, colores, selectores, valores, etc. Pero.. Bootstrap le gana en utilidades y componentes.
 
 [Materialize CSS](https://materializecss.com/) implementa el lenguaje visual de Google, solo tiene la version 0 y la 1. Fue el primer framework que dejo de usar jQuery, solo se necesitaba al hoja de CSS y de JS. Se usa mucho para los **componentes de formulario**.
 
