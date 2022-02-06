@@ -813,26 +813,39 @@ Lo único que tendría como para mejorar es que las media queries siguen siendo 
 
 #### 3.Procesadores:
 
-Pre procesadores: Son herramientas que toman un lenguaje y lo transforman en CSS.
+Pre procesadores: Son herramientas que toman un lenguaje y lo transforman en CSS. Son meta lenguajes, tiene una sintaxis espefícica que se transpila y se transforma en css, lo que tiene de extra es que agrega funcionalidaddes que css no tiene (como antes que no tenía variables, o determinadas funciones-**mixing**-). 
 
-[Sass](https://sass-lang.com/)
+Permite el **nesting** con el **$**, aunque en CSS todavía esta en parte experimental, ya al menos está en brief a nivel teorico (se trabaja a nivel técinco, en algún momento se irá implementando).
 
-[Less](https://lesscss.org/)
+En general los frameworks tienen su código en SASS. 
 
-[Stylus](https://stylus-lang.com/)
+Permite tener mejor organizado el código css dle proyecto.
 
-Post procesadores: Son herramientas que procesan el CSS y lo optimizan y automatizan.
+Y queda una sola hoja de estilos y minificada.
 
-[Post CSS](https://postcss.org/)
+[Sass](https://sass-lang.com/) es la que más se usa de los tres. Hay archivos que terminan con **scss** que es la sintaxis super css que es similar a css nativo. Es una gema de Ruby y tiene la versión en Node.js. Con **$** se declaran las variables.
 
-[CSS Next](https://cssnext.github.io/)
+Los **partials** son los modulos, pero no importar todo, sino lo que voy a usar.
 
-[CSS in JS](https://cssinjs.org/?v=v10.9.0)
+[Less](https://lesscss.org/), es un paquete de Node de Js, que se debe ejecutar desde una terminal de comandos, hay que instalarlo y una hoja de estilos de less se compila a css. Tiene también el nesting (anidación de CSS).
+
+[Stylus](https://stylus-lang.com/), puede hacer ciclos, crear funciones, hacer calculos aritméticos.
+
+Post procesadores: Son herramientas que procesan el CSS y lo optimizan y automatizan. Por ejemplo que le agregue los prefijos -moz, -o, a todo lo que desde hace un año todavía no es estable; otra cosa que se podría hacer es minificarlo.
+
+Lo puso en el ojo **autoprefixer** que es el pluggin que agregaba los pre fijos para los navegadores que no soportaban determinada propiedad css.
+
+[Post CSS](https://postcss.org/) Es como una guía de estilos, te recomienda que es lo mejor.
+
+[CSS Next](https://cssnext.github.io/), se adelantan a las nuevas características que todavía no están soportadas en CSS de manera nativa. Por ejemplo antes no se le podía aplicar opacidad a un número hexadecimal, pero ahora ya se soporta. Otro ejemplo es lo de los filtros, pero ahora también ya se soporta. Lo que si todavía no se soporta es la anidación.
+
+[CSS in JS](https://cssinjs.org/?v=v10.9.0), con estilos escritos como si fuese un objeto JS, esto se implementa con React y Angular.
 
 Herramientas de Automatización:
 
-Build Tools: Node.js / Grunt / Gulp / Webpack
-Online Tools: Code Pen / JS Bin / Autoprefixer CSS / CSS Minifier
+Build Tools: [Node.js](https://nodejs.org/en/) / [Grunt](https://gruntjs.com/) / [Gulp](https://gulpjs.com/) / [Webpack](https://webpack.js.org/)
+
+Online Tools: [Code Pen](https://codepen.io/) / [JS Bin](https://jsbin.com/?html,output) / [Autoprefixer CSS](https://autoprefixer.github.io/) / [CSS Minifier](https://www.minifier.org/) [CSS Minifier 2](https://www.toptal.com/developers/cssminifier/)
 
 #### 4.Guías de Estilos
 
