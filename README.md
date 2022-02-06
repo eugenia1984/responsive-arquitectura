@@ -841,11 +841,33 @@ Lo puso en el ojo **autoprefixer** que es el pluggin que agregaba los pre fijos 
 
 [CSS in JS](https://cssinjs.org/?v=v10.9.0), con estilos escritos como si fuese un objeto JS, esto se implementa con React y Angular.
 
-Herramientas de Automatización:
+**Herramientas de Automatización para utilizar los pre y post procesadores**:
 
-Build Tools: [Node.js](https://nodejs.org/en/) / [Grunt](https://gruntjs.com/) / [Gulp](https://gulpjs.com/) / [Webpack](https://webpack.js.org/)
+Build Tools: 
 
-Online Tools: [Code Pen](https://codepen.io/) / [JS Bin](https://jsbin.com/?html,output) / [Autoprefixer CSS](https://autoprefixer.github.io/) / [CSS Minifier](https://www.minifier.org/) [CSS Minifier 2](https://www.toptal.com/developers/cssminifier/)
+[Node.js](https://nodejs.org/en/) permite ejecutar JS, pero del lado del servidor y para la gestión de dependencias en el lado dle Front End (SASS, Less, Stylus).
+
+[Grunt](https://gruntjs.com/) fue uno de los primeros gestores de tareas (task runner), pero otras lo sustituyeron.
+
+[Gulp](https://gulpjs.com/) para generar flujos de trabajos pequeños.
+
+[Webpack](https://webpack.js.org/) es un bundler, es herramienta de React, es el compaquetador y configurador, puedo compilar en un solo archivo js, o varias hojas css las compilo en una sola, también puedo comprimir imagenes
+
+Online Tools: 
+
+[Code Pen](https://codepen.io/) podes generar pequeños proyectos con HTML, CSS y JS. Creas un *pen* (un proyecto) y lo podes compartir, puedo inclusive seleccionar la sintaxis scss. También soporta EMMET.
+
+[JS Bin](https://jsbin.com/?html,output) es como un editor de codigo, y puedo configurar scss. 
+
+[Autoprefixer CSS](https://autoprefixer.github.io/) se copia la hoja de estilos y genera un codigo post procesado con los pre fijos
+
+[CSS Minifier](https://www.minifier.com/) minifica el código css.
+
+---
+
+**Lo importante es saber las bases de HTML y CSS, ya que tanto las librerías, procesadores como frameworks van a ir variando en el timepo**.
+
+---
 
 #### 4.Guías de Estilos
 
