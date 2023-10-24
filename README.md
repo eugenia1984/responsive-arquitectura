@@ -5,6 +5,8 @@
 
 You can see the video [here](https://www.youtube.com/watch?v=udGrXWeJp1Y&list=PLvq-jIkSeTUZYcX9SYwVe7f66afwd9qk_&index=5)
 
+---
+
 ## Tech Stack 🛠️
 
 **HTML5** & **CSS3**
@@ -12,6 +14,7 @@ You can see the video [here](https://www.youtube.com/watch?v=udGrXWeJp1Y&list=PL
 
 [You can take a look of the proyect here.](https://eugenia1984.github.io/responsive-arquitectura/)
 
+---
 
 # Please: 🎁
 
@@ -23,9 +26,10 @@ You can see the video [here](https://www.youtube.com/watch?v=udGrXWeJp1Y&list=PL
 
 - Notes: 
 
-I appreciate your interest in this repository ⌨️ with ❤️ by [María Eugenia Cost](https://github.com/eugenia1984) a 😊 and follow me on [LinkedIn](https://www.linkedin.com/in/mar%C3%ADaeugeniacosta/)
+I appreciate your interest in this repository ⌨️ with ❤️ by [María Eugenia Cost](https://github.com/eugenia1984) a 😊 and follow me on[LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
 
 
+---
 ---
 
 
@@ -35,11 +39,15 @@ I appreciate your interest in this repository ⌨️ with ❤️ by [María Euge
 
 Podés ver el vidoe de Jon [acá](https://www.youtube.com/watch?v=udGrXWeJp1Y&list=PLvq-jIkSeTUZYcX9SYwVe7f66afwd9qk_&index=5)
 
+---
+
 ## Stack teconológico 🛠️
 
 **HTML5** y **CSS3**
 
 [Podés ver el proyecto del curso acá](https://eugenia1984.github.io/responsive-arquitectura/)
+
+---
 
 ## Por favor: 🎁
 
@@ -251,17 +259,17 @@ Están relacionados con las **media queries**, son los puntos de quiebre para de
 
 En el libro de Ethan Marcot ya nos sugería unas medidas para el responsive design:
 
-320px para dispositivos con pantallas pequeñas. como los telefonos en modo vertical
+- 320px para dispositivos con pantallas pequeñas. como los telefonos en modo vertical
 
-480px para los dispositivos con pantallas pequeñas, como los telefonos en modo horizontal; o los mobiles de gama alta en modo vertical.
+- 480px para los dispositivos con pantallas pequeñas, como los telefonos en modo horizontal; o los mobiles de gama alta en modo vertical.
 
-600px para tablas pequeñas. como el kindle
+- 600px para tablas pequeñas. como el kindle
 
-768px para tabletas de diez pulgadas como el iPad, en modo vertical
+- 768px para tabletas de diez pulgadas como el iPad, en modo vertical
 
-1024px para tablets como el iPad en modo horizontal
+- 1024px para tablets como el iPad en modo horizontal
 
-1200px para pantallas panorámicas, como laptops o desktops.
+- 1200px para pantallas panorámicas, como laptops o desktops.
 
 En general por más que tenga una pantalla de 1900px, se suele dejar el contenedor a 1200px, para que no tengamos la mala experiencia en la lectura que tengamos que ir moviendonos de un lado para el otro, si se le podria aplicar el maximo de ancho a la hero-image o a algún mensaje que quiera llamar la atención, se le puede poner una imagen de fondo la 100% y el contenido igual que llegue a los 1200px.
 
@@ -275,17 +283,14 @@ Muy importante **conviete tus breakpoints en pxs a ems**, ya que los pixeles son
 
 Objetivo en pixeles / Contexto en pixeles = Resultado en **Ems** : 
 
+```
 - 320px / 16px = 20em
-
 - 480px / 16px = 30em
-
 - 600px / 16px = 37.5em
-
 - 768px / 16px = 48em
-
 - 1024px / 16px = 64em
-
 - 1200px / 16px = 75em
+```
 
 ---
 
@@ -297,17 +302,17 @@ La etiqueta **viewport** es el área visible de nuestro navegador y permite defi
 
 Tiene 6 atributos importantes:
 
-**width**: define el ancho visible, suele usarse la constante device-width para que se adapte al ancho del dispositivo.
+- **width**: define el ancho visible, suele usarse la constante device-width para que se adapte al ancho del dispositivo.
 
-**height**: define el alto visible, suele usarse la constante device-height para que se adapte al alto del dispositivo.
+- **height**: define el alto visible, suele usarse la constante device-height para que se adapte al alto del dispositivo.
 
-**initial-scale**: define la escala inicial a la que deberá visualizarse el contenido, siendo 1 el 100%.
+- **initial-scale**: define la escala inicial a la que deberá visualizarse el contenido, siendo 1 el 100%.
 
-**minimus-scale**: define la escala mínima a la que se podrá hacer zoom al contenido, por ejemplo si se configura .5 significa que se podrá hacer un zoom de hasta el 50%. Para controlar hasta donde el usuario hace zoom, para que no se rompa la maquetacion.
+- **minimus-scale**: define la escala mínima a la que se podrá hacer zoom al contenido, por ejemplo si se configura .5 significa que se podrá hacer un zoom de hasta el 50%. Para controlar hasta donde el usuario hace zoom, para que no se rompa la maquetacion.
 
-**maximum-scale**: define la escala máxima a la que se podrá hacer zoom al contenido, por ejemplo si se configura 3 significa que se podrá hacer un zoom de hasta el 300%.
+- **maximum-scale**: define la escala máxima a la que se podrá hacer zoom al contenido, por ejemplo si se configura 3 significa que se podrá hacer un zoom de hasta el 300%.
 
-**user-scalable**: define si el usuario puede escalar o no el contenido, sus valores son *yes* por defecto y *no* para bloquear esta propiedad. Es una propiedad booleana. 
+- **user-scalable**: define si el usuario puede escalar o no el contenido, sus valores son *yes* por defecto y *no* para bloquear esta propiedad. Es una propiedad booleana. 
 
 Al ponerle no impido que el usuario haga zoom in o zoom out, pero el usuario final está por sobre todos y su interacción es lo más importante, y si le saco el zoom, en un celular no van a poder ampliar la pantalla, lo cual va a ser un inconveniente para alguien con alguna discapacidad visual, lo cual es malo en cuanto a la experiencia de usuario.
 
@@ -329,15 +334,13 @@ El primero de todos fue 960 grid system, centraba el sitio a 960 px y dejaba mar
 
 Tamaño (media queries) - Grid artesanal
 
+```
 xs - extrasmall -     0     -   479px   - 480res
-
 sm -  small  -   480(30em)  -   767px   - 800res
-
 md -  medium  - 7968px(48em) -   991px  - 800res
-
 lg -  large  -  992px(62rem) -  1199px  - 1280res
-
 xl - extralarge - +1200px(75em)          - 1281res
+```
 
 ---
 
